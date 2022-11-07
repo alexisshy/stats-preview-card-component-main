@@ -7,33 +7,38 @@
 body {
     color: white;
     font-family:'Lexend Deca', sans-serif;
-    font-size: ;
     background-color: hsl(233, 47%, 7%);
 
       
 }
 
 .container {
+    display: flex;
+    flex-direction: column-reverse;
     border-radius: 2rem;
     margin: 50px 20px;
     padding: 0 0 20px;
     text-align: center;
 }
 
-.container img {
-    background: url("./images/image-header-mobile.jpg");
+ .container img {
+    
     border-radius: 10px 10px 0 0;
-    background-color: purple;
-    mix-blend-mode: ;
-    opacity: 0.5;
+    
+    mix-blend-mode: overlay;
+    /*opacity: 0.7;*/
     display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.image {
+    background-color: hsl(277, 64%, 61%);
 }
 
 .card {
    background-color: hsl(244, 38%, 16%);
-   display: ;
-   flex-direction: ;
-   
    border-radius: 0 0 10px 10px;
 }
 
@@ -62,9 +67,9 @@ body {
  ul {
     /*display: flex;
     flex-direction: row;*/
-    justify-content: space-evenly;*/
+    justify-content: space-evenly;
     margin-top: 80px;
-    font-size: ;
+    /*font-size: ;*/
     margin-bottom: 50px;
     list-style: none;
 }
@@ -75,7 +80,7 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: 400;
-    font-size: ;
+    /*font-size: ;*/
     line-height: 1.4;
     
 }
@@ -86,49 +91,52 @@ body {
     font-weight: 700;
     
 }
-img {
-    display: block;
-    height: 100%;
-    object-fit: cover;
-}
+
 
 @media (min-width: 992px) {
     body {
-        
-    }
+         }
 
     .container {
         display: flex;
-        flex-direction:;
-        align-items: center;
-        justify-content: center;
+        flex-direction:row;
+        /*align-items: center;
+        justify-content: center;*/
         padding: 0;
+        height: 100vh;
+        
+    
     
     }
-    .card {
-        width: 50%;
+
+    .image {
+        min-width: 50%;
+        border-radius: 0 10px 10px 0;
         
+    }
+
+
+    .card {
+        min-width: 50%;
+        border-radius: 10px 0 0 10px;
     }
 
     p {
         margin-bottom: 50px;
     }
-    img {
-        width: 50%;
-        border-radius: 0 10px 10px 0;
-    }
+   
     ul {
     display: flex;
 
-}
+    }
 
-ul li {
+    ul li {
     margin-right: 30px;
     font-size: 13px;
-}
- 
-li span {
-    font-size: ;
-}
+    }
+
+    li span {
+    /*font-size: ;*/
+    }
 
 }
